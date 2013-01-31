@@ -5,7 +5,7 @@ describe Resource do
 
   context '.uri' do
     before :each do
-
+      @resource
     end
     
     it 'only has a link' do

@@ -14,6 +14,7 @@ class Resource
 
   validates :title, presence: true
   validate :resource_presence
+  validate :unique_uri
 
   def resource_presence
     if self.link.blank? && self.file.blank?
@@ -23,5 +24,9 @@ class Resource
 
   def uri
     self.file.exists? ? self.file.url : self.link
+  end
+
+  def unique_uri
+    true
   end
 end

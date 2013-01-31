@@ -51,7 +51,7 @@ end
 
 group :test do
   gem 'mongoid-rspec'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.1.0' # v4.2.0 cause this error: uninitialized constant FactoryGirl::Railtie
   gem 'capybara'
   gem 'launchy'
   gem 'guard-rspec'
