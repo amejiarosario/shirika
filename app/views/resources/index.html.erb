@@ -5,14 +5,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:_type) %></th>
-      <th><%= model_class.human_attribute_name(:_id) %></th>
-      <th><%= model_class.human_attribute_name(:path) %></th>
+      <th><%= model_class.human_attribute_name(:priority) %></th>
       <th><%= model_class.human_attribute_name(:title) %></th>
-      <th><%= model_class.human_attribute_name(:last_accessed_at) %></th>
+      <th>URI</th>
       <th><%= model_class.human_attribute_name(:tags) %></th>
-      <th><%= model_class.human_attribute_name(:user_id) %></th>
+      <th><%= model_class.human_attribute_name(:last_accessed_at) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -20,14 +17,11 @@
   <tbody>
     <% @resources.each do |resource| %>
       <tr>
-        <td><%= link_to resource.id, resource_path(resource) %></td>
-        <td><%= resource._type %></td>
-        <td><%= resource._id %></td>
-        <td><%= resource.path %></td>
-        <td><%= resource.title %></td>
-        <td><%= resource.last_accessed_at %></td>
+        <td><%= resource.priority %></td>
+        <td><%= link_to resource.title, resource_path(resource) %></td>
+        <td><%= link_to truncate(resource.uri,length: 30), resource.uri %></td>
         <td><%= resource.tags %></td>
-        <td><%= resource.user_id %></td>
+        <td><%=l resource.last_accessed_at %></td>
         <td><%=l resource.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

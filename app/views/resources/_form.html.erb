@@ -1,8 +1,26 @@
-<%= form_for @resource, :html => { :class => 'form-horizontal' } do |f| %>
+<%= form_for @resource, :html => { :class => 'form-horizontal', :multipart => true } do |f| %>
+  <% if @resource.errors.any? %>
+    <div class="alert alert-error">
+      <a class="close" data-dismiss="alert">x</a>
+      <h3><strong><%= pluralize(@resource.errors.count, "error") %> prohibited this resource from being saved:</strong></h3>
+      <ul>
+      <% @resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="control-group">
-    <%= f.label :path, :class => 'control-label' %>
+    <%= f.label :file, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :path, :class => 'text_field' %>
+      <%= f.file_field :file, :class => 'text_field' %>
+    </div>
+  </div>  
+  <div class="control-group">
+    <%= f.label :link, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :link, :class => 'text_field' %>
     </div>
   </div>
   <div class="control-group">

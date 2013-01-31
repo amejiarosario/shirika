@@ -1,4 +1,4 @@
-mongo: /opt/local/bin/mongod
+#mongo: /opt/local/bin/mongod
 web: rails s
 
 #beanstalk:  beanstalkd -p 11300

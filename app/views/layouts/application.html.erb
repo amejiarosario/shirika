@@ -70,12 +70,13 @@
         </div><!--/span-->
         <div class="span9">
           <%= bootstrap_flash %>
+          <%#= debug flash %>
           <%= yield %>
         </div>
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2012</p>
+        <p>&copy; <%= link_to "Adrian Mejia", "http://adrianmejia.com"%> 2013</p>
       </footer>
 
     </div> <!-- /container -->

@@ -43,7 +43,12 @@ gem 'bson_ext'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem "mongoid-paperclip", require: "mongoid_paperclip" 
 
 group :development do
 	gem 'better_errors'
+end
+
+group :test do
+  gem 'mongoid-rspec'
 end
