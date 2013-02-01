@@ -11,7 +11,7 @@
   <dt><strong><%= model_class.human_attribute_name(:file) %>:</strong></dt>
   <dd><%= link_to @resource.file.url || "-", @resource.file.url %></dd>  
   <dt><strong><%= model_class.human_attribute_name(:link) %>:</strong></dt>
-  <dd><%= @resource.link || "-" %></dd>
+  <dd><%= link_to @resource.link || "-", @resource.link %></dd>
   <dt><strong><%= model_class.human_attribute_name(:title) %>:</strong></dt>
   <dd><%= @resource.title || "-" %></dd>
   <dt><strong><%= model_class.human_attribute_name(:last_accessed_at) %>:</strong></dt>
