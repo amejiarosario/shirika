@@ -14,6 +14,8 @@ class ResourcesController < ApplicationController
   # GET /resources/1.json
   def show
     @resource = Resource.find(params[:id])
+    @resource.last_accessed_at = Time.now
+    @resource.save    
 
     respond_to do |format|
       format.html # show.html.erb
@@ -59,10 +61,7 @@ class ResourcesController < ApplicationController
     @resource = Resource.find(params[:id])
 
     respond_to do |format|
-      if @resource.update_attributes(params[:resource]) && 
-        (@resource.last_accessed_at = Time.now) && 
-        @resource.save
-
+      if @resource.update_attributes(params[:resource])
         format.html { redirect_to @resource, notice: 'Resource was successfully updated.' }
         format.json { head :no_content }
       else

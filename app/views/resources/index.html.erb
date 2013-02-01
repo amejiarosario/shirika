@@ -19,10 +19,10 @@
       <tr>
         <td><%= resource.priority %></td>
         <td><%= link_to resource.title, resource_path(resource) %></td>
-        <td><%= link_to truncate(resource.uri,length: 30), resource.uri %></td>
+        <td><%= truncate(resource.uri,length: 30) %></td>
         <td><%= resource.tags %></td>
-        <td><%=l resource.last_accessed_at %></td>
-        <td><%=l resource.created_at %></td>
+        <td><%= resource.last_accessed_at.to_s :short %></td>
+        <td><%= resource.created_at.to_s :short %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_resource_path(resource), :class => 'btn btn-mini' %>
