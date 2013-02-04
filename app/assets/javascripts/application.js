@@ -13,13 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require dataTables/jquery.dataTables
+//= require underscore
+//= require backbone
+//= require resources
+//= require_tree ../templates
+//= require_tree ./models
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 //= require_tree .
-
-$('.datatable').dataTable();
-
-// For fixed width containers
-// $('.datatable').dataTable({
-//   "sDom": "<'row'<'span6'l><'span6'f>r>t<'row'<'span6'i><'span6'p>>",
-//   "sPaginationType": "bootstrap"
-// });
