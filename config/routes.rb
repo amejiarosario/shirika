@@ -1,4 +1,7 @@
 Shirika::Application.routes.draw do
+  resources :examples
+
+
   resources :resources
 
 
