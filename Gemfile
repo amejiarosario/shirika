@@ -17,7 +17,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-datatables-rails'
+  # gem 'jquery-datatables-rails'
 end
 
 gem 'jquery-rails'
@@ -45,6 +45,7 @@ gem 'therubyracer'
 gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails'
 gem 'mongoid-paperclip', require: 'mongoid_paperclip' 
+# gem 'best_in_place'
 
 group :development do
 	gem 'better_errors'
@@ -62,3 +63,5 @@ group :development, :test do
   gem 'pry'
   gem 'rspec-rails'
 end
+
+gem 'backbone-on-rails'
