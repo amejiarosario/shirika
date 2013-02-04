@@ -1,5 +1,5 @@
-mongo: /opt/local/bin/mongod
 web: rails s
+mongo: /opt/local/bin/mongod
 
 #beanstalk:  beanstalkd -p 11300
 #postgres: postgres -D /usr/local/psql2/data

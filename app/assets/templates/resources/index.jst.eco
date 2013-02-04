@@ -1,0 +1,24 @@
+<table class="table table-striped">
+	<thead>
+      <th>priority</th>
+      <th>title</th>
+      <th>link</th>
+      <th>path</th>
+      <th>tags</th>
+      <th>last</th>
+      <th>created</th>
+	</thead>
+	<tbody>
+		<%= @collection.each (item) ->: %>
+			<tr>
+				<td><%- item.get('priority') %></td>
+				<td><%- item.get('title') %></td>
+				<td><%- item.get('link') %></td>
+				<td><%- item.get('path') %></td>
+				<td><%- item.get('tags') %></td>
+				<td><%- item.get('last_accessed_at') %></td>
+				<td><%- item.get('created_at') %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
