@@ -1,9 +1,14 @@
+# Creates namespace
 window.Shirika =
 	Models: {}
 	Collections: {}
 	Views: {}
 	Routers: {}
-	init: -> console.log 'hello from backbone.js'
+	init: -> 
+		console.log 'window.Shirika::init()'
+		new Shirika.Routers.Resources
+		Backbone.history.start()
 
-$(document).ready ->
+$(->
 	Shirika.init()
+)
