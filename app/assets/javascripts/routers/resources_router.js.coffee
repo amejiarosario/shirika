@@ -11,4 +11,4 @@ class Shirika.Routers.Resources extends Backbone.Router
 	index: ->
 		console.log "Shirika.Routers#index"
 		view = new Shirika.Views.ResourcesIndex(collection: @collection)
-		$('#container').html(view.render().el)
+		#$('#container').html(view.render().el)

@@ -1,35 +1,17 @@
-<table class="table table-striped">
-	<thead>
-      <th>priority</th>
-      <th>title</th>
-      <th>link</th>
-      <th>path</th>
-      <th>tags</th>
-      <th>last</th>
-      <th>created</th>
-      <th>actions</th>
-	</thead>
-	<tbody>
-		<%= @collection.each (item) ->: %>
-			<tr>
-				<td>
-					<i id="priority-up" class="icon-arrow-up"></i>
-					<%- item.get('priority') %>
-					<i id="priority-down" class="icon-arrow-down"></i>
-				</td>
-				<td>
-					<a href="/resources/<%= item.id %>"><%- item.get('title') %></a>
-				</td>
-				<td><%- item.get('link') %></td>
-				<td><%- item.get('path') %></td>
-				<td><%- item.get('tags') %></td>
-				<td><%- item.get('last_accessed_at') %></td>
-				<td><%- item.get('created_at') %></td>
-				<td>
-          <a href="/resources/<%= item.id %>/edit" class="btn btn-mini">Edit</a>
-          <a href="/resources/<%= item.id %>" class="btn btn-mini btn-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
-        </td>
-			</tr>
-		<% end %>
-	</tbody>
-</table>
+<td>
+  <i id="priority-up" class="icon-arrow-up"></i>
+  <%- @model.get('priority') %>
+  <i id="priority-down" class="icon-arrow-down"></i>
+</td>
+<td>
+  <a href="/resources/<%= @model.id %>"><%- @model.get('title') %></a>
+</td>
+<td><%- @model.get('link') %></td>
+<td><%- @model.get('path') %></td>
+<td><%- @model.get('tags') %></td>
+<td><%- @model.get('last_accessed_at') %></td>
+<td><%- @model.get('created_at') %></td>
+<td>
+  <a href="/resources/<%= @model.id %>/edit" class="btn btn-mini">Edit</a>
+  <a href="/resources/<%= @model.id %>" class="btn btn-mini btn-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+</td>

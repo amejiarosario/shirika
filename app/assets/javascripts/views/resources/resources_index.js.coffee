@@ -1,10 +1,15 @@
 class Shirika.Views.ResourcesIndex extends Backbone.View
-  template: JST['resources/index']
+  el: '#resources tbody'
 
   initialize: ->
-  	@collection.on('reset', @render, this)
+  	@collection.on('reset', @addAll, this)
+  	@collection.on('add', @addAll, this)
 
-  render: ->
-  	$(@el).html(@template(collection: @collection))
-  	this
+  addOne: (item)->
+    view = new Shirika.Views.ResourcesIndexRow(model: item)
+    $(@el).append(view.render().el)
+
+  addAll: ->
+    $(@el).html ''
+    @collection.each @addOne, this
 

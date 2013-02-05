@@ -5,38 +5,19 @@
 
 <div id="container"></div>
 
-<table id="resources" class="table table-striped" >
+<table id="resources" class="table table-striped">
   <thead>
-    <tr>
-      <th><%= model_class.human_attribute_name(:priority) %></th>
-      <th><%= model_class.human_attribute_name(:title) %></th>
-      <th>URI</th>
-      <th><%= model_class.human_attribute_name(:tags) %></th>
-      <th><%= model_class.human_attribute_name(:last_accessed_at) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
+      <th>priority</th>
+      <th>title</th>
+      <th>link</th>
+      <th>path</th>
+      <th>tags</th>
+      <th>last</th>
+      <th>created</th>
+      <th>actions</th>
   </thead>
   <tbody>
-    <% @resources.each do |resource| %>
-      <tr>
-        <td><%= resource.priority %></td>
-        <td><%= link_to resource.title, resource_path(resource) %></td>
-        <td><%= truncate(resource.uri,length: 30) %></td>
-        <td><%= resource.tags %></td>
-        <td><%= resource.last_accessed_at.to_s :short %></td>
-        <td><%= resource.created_at.to_s :short %></td>
-        <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_resource_path(resource), :class => 'btn btn-mini' %>
-          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-                      resource_path(resource),
-                      :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-                      :class => 'btn btn-mini btn-danger' %>
-        </td>
-      </tr>
-    <% end %>
+    <!-- templates/resources/index.jst.eco -->
   </tbody>
 </table>
 
