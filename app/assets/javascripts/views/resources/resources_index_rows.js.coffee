@@ -12,11 +12,11 @@ class Shirika.Views.ResourcesIndexRow extends Backbone.View
     'click .destroy-button' : 'destroy'
 
   increasePriority: ->
-    @model.set('priority',@model.get('priority')+1)
+    @model.set('priority',@model.get('priority')-1)
     @model.save()
 
   decreasePriority: ->
-    @model.set('priority',@model.get('priority')-1)
+    @model.set('priority',@model.get('priority')+1)
     @model.save()
 
   destroy: ->
