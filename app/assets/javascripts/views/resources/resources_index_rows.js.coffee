@@ -2,6 +2,9 @@ class Shirika.Views.ResourcesIndexRow extends Backbone.View
   template: JST['resources/index']
   tagName: 'tr'
 
+  initialize: ->
+    @model.on 'change', @render, this
+
   events:
     'click .priority-up' : 'increasePriority'
     'click .priority-down' : 'decreasePriority'
