@@ -13,5 +13,5 @@
 <td><%- @model.get('created_at') %></td>
 <td>
   <a href="/resources/<%= @model.id %>/edit" class="btn btn-mini">Edit</a>
-  <a href="/resources/<%= @model.id %>" class="btn btn-mini btn-danger" data-confirm="Are you sure?" data-method="delete" rel="nofollow">Destroy</a>
+  <button class="btn btn-mini btn-danger destroy-button">Destroy</button>
 </td>
