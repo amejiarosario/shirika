@@ -1,4 +1,4 @@
-web: rails s
+web: rails s thin
 mongo: /opt/local/bin/mongod
 
 #beanstalk:  beanstalkd -p 11300
