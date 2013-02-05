@@ -1,7 +1,7 @@
 <td>
-  <i id="priority-up" class="icon-arrow-up"></i>
+  <i class="icon-arrow-up priority-up"></i>
   <%- @model.get('priority') %>
-  <i id="priority-down" class="icon-arrow-down"></i>
+  <i class="icon-arrow-down priority-down"></i>
 </td>
 <td>
   <a href="/resources/<%= @model.id %>"><%- @model.get('title') %></a>
