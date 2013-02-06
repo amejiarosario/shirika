@@ -31,7 +31,7 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 # gem 'unicorn'
 gem 'thin' # https://github.com/olistik/node-vs-thin-vs-puma
-# gem 'puma'
+gem 'puma'
 
 # Deploy with Capistrano
 # gem 'capistrano'
