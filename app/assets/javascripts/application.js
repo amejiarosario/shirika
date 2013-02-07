@@ -21,6 +21,9 @@
 //= require_tree ./collections
 //= require_tree ./views
 //= require_tree ./routers
-//= require pdf
-//= require compatibility
+//= require pdfjs/compatibility
+// require pdfjs/l10n
+//= require pdfjs/pdf
+// require pdfjs/debugger
+// require pdfjs/viewer
 //= require_tree .
