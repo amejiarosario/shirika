@@ -13,10 +13,14 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
-//= require underscore
 //= require pdfjs/compatibility
 // require pdfjs/l10n
 //= require pdfjs/pdf
 // require pdfjs/debugger
 // require pdfjs/viewer
+//= require underscore
+//= require backbone
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/shirika
 //= require_tree .

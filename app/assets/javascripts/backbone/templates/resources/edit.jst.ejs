@@ -1,0 +1,45 @@
+<h1>Edit resource</h1>
+
+<form id="edit-resource" name="resource">
+  <div class="field">
+    <label for="title"> title:</label>
+    <input type="text" name="title" id="title" value="<%= title %>" >
+  </div>
+
+  <div class="field">
+    <label for="created_at"> created_at:</label>
+    <input type="text" name="created_at" id="created_at" value="<%= created_at %>" >
+  </div>
+
+  <div class="field">
+    <label for="last_accessed_at"> last_accessed_at:</label>
+    <input type="text" name="last_accessed_at" id="last_accessed_at" value="<%= last_accessed_at %>" >
+  </div>
+
+  <div class="field">
+    <label for="tags"> tags:</label>
+    <input type="text" name="tags" id="tags" value="<%= tags %>" >
+  </div>
+
+  <div class="field">
+    <label for="priority"> priority:</label>
+    <input type="text" name="priority" id="priority" value="<%= priority %>" >
+  </div>
+
+  <div class="field">
+    <label for="file"> file:</label>
+    <input type="text" name="file" id="file" value="<%= file %>" >
+  </div>
+
+  <div class="field">
+    <label for="user_id"> user_id:</label>
+    <input type="text" name="user_id" id="user_id" value="<%= user_id %>" >
+  </div>
+
+  <div class="actions">
+    <input type="submit" value="Update Resource" />
+  </div>
+
+</form>
+
+<a href="#/index">Back</a>
