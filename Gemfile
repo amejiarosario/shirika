@@ -66,4 +66,4 @@ group :development, :test do
   gem 'rspec-rails'
 end
 
-gem 'backbone-on-rails'
+gem 'backbone-rails'
